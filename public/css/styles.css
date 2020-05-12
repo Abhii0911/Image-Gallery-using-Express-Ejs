@@ -17,3 +17,17 @@ h1,h2,h3,h4,h5,h6,p{
 form label{
     margin-top: 10px;
 }
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+.box{
+    max-width: 33%;
+    flex: 0 0 33%;
+}
+.box img{
+    max-width: 100%;
+    height: auto;
+}

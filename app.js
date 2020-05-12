@@ -10,12 +10,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
+
+const imageList= [];
 app.get("/", (req,res)=>{
-    res.render("home")
+    res.render("home",{
+        imagesList:imageList
+    })
 })
 
 app.get("/compose", (req,res) =>{
     res.render("compose");
+})
+
+app.post("/compose", (req,res)=>{
+    const imageDetails= {
+        imageUrl : req.body.imgSrc,
+        imageCat : req.body.imgCat,
+        imageDesc : req.body.imgDesc,
+    };
+    imageList.push(imageDetails);
+    res.redirect("/")
 })
 
 

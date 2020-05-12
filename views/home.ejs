@@ -1,5 +1,31 @@
 <%- include("partials/header") -%>
 
-<h1>hello</h1>
+<form action="/compose" method="post" class="w-100" autocomplete="off">
+    <div class="form-group">
+        <div class="form-row pl-3 pr-3">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="imgSrc" id="img-source" aria-describedby="emailHelp" placeholder="Type Source URL... ">
+            </div>
+            
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary w-100" name="button">Search</button>
+            </div>
+        </div>
+        
+    </div>
+      
+      
+</form>
+<div class="images-container">
+    <div class="row boxes">
+        <% imagesList.forEach( (imageObj) =>{%>
+            <div class="box">
+                <img src="<%= imageObj.imageUrl %>" alt="<%= imageObj.imageDesc %>">
+                <p><%= imageObj.imageDesc %></p>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
 
 <%- include("partials/footer") -%>
