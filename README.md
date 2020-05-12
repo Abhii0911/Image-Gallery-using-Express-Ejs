@@ -1,0 +1,2 @@
+This project lets user or client to add URL or source for images available over internet so as to add watch it on homepage. 
+The projects also categorises images and let user filter them as per their categories
