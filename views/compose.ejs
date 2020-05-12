@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+
+<h1>Compose</h1>
+<form action="/compose" method="post" class="w-100" autocomplete="off">
+    <div class="form-group">
+        <div class="form-row pl-3 pr-3">
+            <div class="col-sm-7">
+                <label for="img-source">Image URL</label>
+                <input type="text" class="form-control" name="imgSrc" id="img-source" aria-describedby="emailHelp" placeholder="Type Source URL... ">
+            </div>
+            
+            <div class="col-sm-5">
+                <label for="img-category">Image Category</label>
+                <input type="text" class="form-control" name="imgCat" id="img-category" aria-describedby="emailHelp" placeholder="Type Image Category... ">
+            </div>
+        </div>
+        
+        
+        <div class="col-12">
+            <label for="img-description">Post</label>
+        <textarea class="form-control"  name="imgDesc" id="img-description" cols="20" rows="5" placeholder="Type Image Description"></textarea>
+        </div>
+        
+    </div>
+      
+      <button type="submit" class="btn btn-primary m-3" name="button">Submit</button>
+</form>
+
+<%- include('partials/footer'); -%>
